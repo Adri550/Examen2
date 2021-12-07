@@ -14,14 +14,15 @@ const PeliculasProvider = (props)=>{
     
     const agregar=(movie,horario)=>{
 
-      let precio;
+      let precio=65;
       if(movie.clasificacion==='A')
-        precio=50;
+        precio= precio;
       if(movie.clasificacion==='B')
-        precio=60;      
+        precio= precio;      
       if(movie.clasificacion==='C')
-        precio=65;
-        const temp={
+        precio= precio;
+       
+        const temporal={
           codigo:movie.codigo,
           nombre:movie.nombre, 
           idioma:movie.idioma, 
@@ -32,19 +33,19 @@ const PeliculasProvider = (props)=>{
           duracion:movie.duracion,
           total:0
         }
-        setCompra(temp);
+        setCompra(temporal);
       }
     
     const calcular=(cant,pelicula)=>{
-      let precio;
+      let precio= 65;
       if(pelicula.clasificacion==='A')
-        precio=50;
+        precio= precio;
       if(pelicula.clasificacion==='B')
-        precio=60;      
+        precio=precio;      
       if(pelicula.clasificacion==='C')
-        precio=65;
+        precio=precio;
     
-      const temporal={
+      const arraytemp ={
         codigo:pelicula.codigo,
         nombre:pelicula.nombre, 
         idioma:pelicula.idioma, 
@@ -55,7 +56,7 @@ const PeliculasProvider = (props)=>{
         duracion:pelicula.duracion,
         total:cant*precio
       }
-      setCompra(temporal); 
+      setCompra(arraytemp); 
     }
     const eliminarCompra=()=>{
       setCompra({});
